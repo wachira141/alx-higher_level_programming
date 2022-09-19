@@ -7,18 +7,23 @@
  */
 int check_cycle(listint_t *list)
 {
-listint_t *temp;
+listint_t *next_node = list;
+listint_t *prev_node = list;
 
 if (list == NULL)
 	return (0);
 
-temp = list->next;
-
-while (temp != NULL)
+while (1)
 {
-if (temp == list)
+if (next_node->next != NULL && next_node->next->next != NULL)
+{
+next_node = next_node->next->next;
+prev_node = prev_node->next;
+
+if (next_node == prev_node)
 	return (1);
-temp = temp->next;
 }
+else
 return (0);
+}
 }
