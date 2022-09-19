@@ -7,7 +7,7 @@
  */
 int check_cycle(listint_t *list)
 {
-listint *temp;
+listint_t *temp;
 
 if (list == NULL)
 	return (0);
