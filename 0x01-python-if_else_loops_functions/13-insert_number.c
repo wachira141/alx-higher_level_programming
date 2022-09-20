@@ -18,6 +18,7 @@ if(!new_node)
 if (temp == NULL || temp->n >= number)
 {
 new_node->next = temp;
+new_node->n = number;
 *head = new_node;
 return(new_node);
 }
