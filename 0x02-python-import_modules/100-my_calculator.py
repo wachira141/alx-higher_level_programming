@@ -11,4 +11,5 @@ if __name__ == "__main__":
         exit(1)
     a = int(sys.argv[1])
     b = int(sys.argv[3])
-    print("{:d} {:s} {:d} = {:d}".format(a, sys.argv[2], b, op[sys.argv[2]](a, b)))
+    ans = op[sys.argv[2]](a, b)
+    print("{:d} {:s} {:d} = {:d}".format(a, sys.argv[2], b, ans))
