@@ -9,7 +9,7 @@ if __name__ == "__main__":
     elif length == 2:
         print("{} argument:".format(1))
     else:
-         print("{} arguments:".format(length -1))
+        print("{} arguments:".format(length - 1))
     while i < length:
         print("{}: {}".format(i, args[i]))
         i += 1
