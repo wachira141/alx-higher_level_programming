@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 a = 89
 b = 10
-a, b = b, a
-print("a={id} - b={:d}".format(a, b))
+x, a, a, b
+b = x
+print("a={:d} - b={:d}".format(a, b))
