@@ -2,9 +2,11 @@
 """
 contains func is_kind_of_class
 """
+
+
 def is_kind_of_class(obj, a_class):
     """
-    True: obj is an instance or obj is an instance of a classt that inheritedfrom
+    True: obj is an instance or obj is an instance of a classt
     else :false
     """
     return isinstance(obj, a_class)

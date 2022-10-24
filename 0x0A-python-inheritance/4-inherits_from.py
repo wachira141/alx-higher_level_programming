@@ -2,6 +2,8 @@
 """
 Contains: inherits_from func
 """
+
+
 def inherits_from(obj, a_class):
     """
     use issubclass to get what object is a subclass of

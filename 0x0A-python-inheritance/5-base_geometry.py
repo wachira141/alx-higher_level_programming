@@ -3,7 +3,8 @@
 Contains:
     empty class BaseGeometry
 """
+
+
 class BaseGeometry:
     """class baseGeometry"""
     pass
-

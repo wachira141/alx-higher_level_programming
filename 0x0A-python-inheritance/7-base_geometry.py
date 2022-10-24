@@ -3,6 +3,8 @@
 Contains:
     BaseGeometry class
 """
+
+
 class BaseGeometry:
     """
     methods:
