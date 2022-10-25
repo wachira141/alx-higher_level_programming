@@ -1,5 +1,4 @@
-#!/usr/bin/python3ads from standard input and computes metrics.
-
+#!/usr/bin/python3
 """
 After every ten lines or the input of a keyboard interruption (CTRL + C),
 prints the following statistics:
