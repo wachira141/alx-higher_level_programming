@@ -4,6 +4,7 @@
 """
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """class square
             inherits all the attr from class Rectangle
@@ -63,4 +64,3 @@ class Square(Rectangle):
                     "x": self.x,
                     "y": self.y
                     }
-
