@@ -1,66 +1,95 @@
 #!/usr/bin/python3
 """
-    Contains class square that inherits from Rectangle
+Inherits from Rectangle;
+Inits superclass' id, width (as size), height (as size), x, y
+Contains public attribute size
+Prints [Square] (<id>) <x>/<y> - <size>
+Updates attributes: arg1=id, arg2=size, arg3=x, arg4=y
+Returns dictionary representation of attributes
 """
+
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """class square
-            inherits all the attr from class Rectangle
+    """
+    defines class Square; inherits from class Rectangle
+    Inherited Attributes:
+        id
+        __weight        __height
+        __x             __y
+    Class Attributes:
+        size
+    Inherted Methods:
+        Base.init(self, id=None)
+        Rectangle.init(self, width, height, x=0, y=0, id=None)
+        update(self, *args, **kwargs)
+        width(self)      width(self, value)
+        height(self)     height(self, value)
+        x(self)          x(self, value)
+        y(self)          y(self, value)
+        area(self)       display(self)
+    Methods:
+        __str__
+        __init__(self, size, x=0, y=0, id=None)
+        update(self, *args, **kwargs)
+        size(self)       size(self, value)
+        to_dictionary(self)
     """
     def __init__(self, size, x=0, y=0, id=None):
-        """init a new class square
-        Args:
-            size(int): The size of the square
-            x(int): ThE X Cord of the square
-            y(int): The y cord of the square
-            id(int): the identity of the square
+        """Initialize square"""
+        super().__init__(size, size, x, y, id)
+        self.size = size
+
+    @property
+    def size(self):
+        """Getter size"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """Setter size - sets width and height as size"""
+        self.width = value
+        self.height = value
+
+    def __str__(self):
+        """Prints [Square] (<id>) <x>/<y> - <size>"""
+        return "[{:s}] ({:d}) {:d}/{:d} - {:d}".format(
+            self.__class__.__name__, self.id, self.x, self.y,
+            self.size)
+
+    def update(self, *args, **kwargs):
         """
-        super().__init(size, size, x, y, id)
+        If args: set attributes in this order: id, width, height, x, y
+        If no args given: set attributes according to kwargs
+        """
+        if args:
+            for key, value in enumerate(args):
+                if key == 0:
+                    self.id = value
+                elif key == 1:
+                    self.size = value
+                elif key == 2:
+                    self.x = value
+                else:
+                    self.y = value
+        else:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+                if k == "size":
+                    self.size = v
+                if k == "x":
+                    self.x = v
+                if k == "y":
+                    self.y = v
 
-        @property
-        def size(self):
-            """Size getter"""
-            return self.width
-
-        @size.setter
-        def size(self, value):
-            """size setter"""
-            self.width = value
-            self.height = value
-
-        def update(self, *args, **kwargs):
-            """public method update with args and kwargs method"""
-            if args and len(args) != 0:
-                a = 0
-                for arg in args:
-                    if a == 0:
-                        self.id = arg
-                    elif a == 1:
-                        self.size = arg
-                    elif a == 2:
-                        self.x = arg
-                    else:
-                        self.y = arg
-                a += 1
-
-            else:
-                for k, v in kwargs.items():
-                    if k == 'id':
-                        self.id = value
-                    elif k == 'size':
-                        self.size == value
-                    elif k == 'x':
-                        self.x = value
-                    else:
-                        self.y = value
-
-        def to_dictionary(self):
-            """method to return dict representation"""
-            return {
-                    "id": self.id,
-                    "size": self.width,
-                    "x": self.x,
-                    "y": self.y
-                    }
+    def to_dictionary(self):
+        """Return dictionary representation"""
+        return {
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
+        }
