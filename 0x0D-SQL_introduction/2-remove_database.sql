@@ -1,3 +1,3 @@
--- script that deletes the bd hbtn_0c_0 in 
---your MYSQL SERVER
-DROP IF EXISTS hbtn_0c_0;
+-- delete database; shouldn't fail if non-existent
+
+DROP DATABASE IF EXISTS hbtn_0c_0;

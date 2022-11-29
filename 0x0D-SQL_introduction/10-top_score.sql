@@ -1,4 +1,5 @@
---script that lists all records of the table 
-SELECT `score`, `name`
-FROM `second_name`
-ORDER BY `score`DESC;
+-- display all records of the  data in table
+-- ordered from greatest to least
+
+
+SELECT score, name FROM second_table ORDER BY score DESC;
