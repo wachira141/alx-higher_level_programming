@@ -41,3 +41,5 @@ New User log in
 $ mysql -u username -p
 Usage	Command
 Usage Example	$ cat 0-list_databases.sql | mysql -uroot -p
+
+https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/3/bc2575fee3303b731031.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221130%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221130T131059Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=70ae222a1a3854c1d86f82a609a6a6cd25d5b0ae1a11a1b6039df8ccb2d4d207
