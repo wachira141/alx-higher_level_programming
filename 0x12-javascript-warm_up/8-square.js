@@ -6,8 +6,8 @@ if (isNaN(size))
 } else {
 for (let y = 0; y < size; y++)
 	{
-		let draw = '';
-for (let x = 0; x < size; x ++) draw += 'X';
-		console.log(draw);
+	let draw = '';
+for (let x = 0; x < size; x++) draw += 'X';
+	console.log(draw);
 	}
 }
