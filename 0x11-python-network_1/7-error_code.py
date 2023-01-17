@@ -2,7 +2,6 @@
 """
 script that takes in a URL
 sends a req to the url
-displays the body of the res
 """
 
 import sys, requests

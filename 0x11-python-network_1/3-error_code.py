@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
 Python script that takes in a URL
-ends a request to the URL and
-displays the body of the response (utf-8)
+ends a request to the URL 
 """
 import urllib.request, sys
 import urllib.error

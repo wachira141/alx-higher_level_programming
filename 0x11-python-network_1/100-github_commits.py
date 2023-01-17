@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""script to print the commits by 
+each user
+"""
 
 import sys, requests
 

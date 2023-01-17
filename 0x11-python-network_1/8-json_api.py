@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+"""cript that takes in a letter and sends a POST request """
 import requests, sys
 
 if __name__ == "__main__":
