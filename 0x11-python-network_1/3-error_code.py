@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
 Python script that takes in a URL
-ends a request to the URL 
+ends a request to the URL
 """
-import urllib.request, sys
+import urllib.request
+import sys
 import urllib.error
 
 

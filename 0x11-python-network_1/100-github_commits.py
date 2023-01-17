@@ -1,20 +1,19 @@
 #!/usr/bin/python3
-"""script to print the commits by 
-each user
-"""
+"""lis 10 recent commits of a given github account"""
+import sys
+import requests
 
-import sys, requests
 
 if __name__ == "__main__":
-    res = requests.get('https://api.github.com/repos/{}/{}/commits'.format(
-        sys.argv[2], sys.argv[1]
-    ))
+    url = "https://api.github.com/repos/{}/{}/commits".format(
+        sys.argv[2], sys.argv[1])
 
-    data = res.json()
+    r = requests.get(url)
+    commits = r.json()
     try:
         for i in range(10):
-            print("{}: {}".format(data[i].get('sha'), 
-            data[i].get("commit")
-            .get('author').get("name")))
+            print("{}: {}".format(
+                commits[i].get("sha"),
+                commits[i].get("commit").get("author").get("name")))
     except IndexError:
         pass
