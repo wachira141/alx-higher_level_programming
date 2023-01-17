@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ script to fetch from a url"""
+
 import urllib.request
 
 if __name__ == '__main__':
