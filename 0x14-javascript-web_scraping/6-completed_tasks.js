@@ -22,4 +22,4 @@ request(url, function (err, response, body) {
   } else {
     console.log('Error code: ' + response.statusCode);
   }
-})
+});
